@@ -170,8 +170,8 @@
         }
 
         .contactButton {
-            height: 3vw;
-            width: 20vw;
+           height: clamp(30px,3vw, 65px);
+            width: clamp(120px, 20vw, 500px);
             border-radius: 20px;
             margin-top: 2%;
             background-color: white;
@@ -186,7 +186,7 @@
         .contactMe, .regret {
             position: absolute;
             color: black;
-            font-size: clamp(.5rem,1.5vw,6rem);
+            font-size: clamp(.75rem,1.5vw,6rem);
             transition: .5s;
             font-family: ubuntu;
             font-weight: 200;
