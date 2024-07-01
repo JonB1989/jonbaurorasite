@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="navbar">
+        <!--<svg class="burgerMenu" viewBox="0 0 100 100">
+            <line class="lineOneNew" stroke="white" stroke-width="5" fill="none" x1="20" y1="30" x2="80" y2="30"></line>
+            <line class="lineTwoNew" stroke="white" stroke-width="5" fill="none" x1="30" y1="50" x2="70" y2="50"></line>
+            <line class="lineThreeNew" stroke="white" stroke-width="5" fill="none" x1="20" y1="70" x2="80" y2="70"></line>
+        </svg>-->
+        <ul>
+            <li class="navButtons">Home</li>
+            <li class="navButtons">About</li>
+            <li class="navButtons">Why Me?</li>
+            <li class="navButtons">Contact</li>
+        </ul>
+    </div>
+    <div class="homePage">
+        <div class="blurCircle circleOne"></div>
+        <div class="blurCircle circleTwo"></div>
+        <div class="blurCircle circleThree"></div>
+        <div class="blurCircle circleFour"></div>
+        
+        </div>
+    <div class="container">
+        <div class="firstPage">
+        <div class="titleContainer">
+            <h1>Jon Broome</h1>
+            <h2>I'm a web developer who loves solving complex problems</h2>
+            <div class="contactButton">
+                <h1 class="contactMe">Contact Me</h1>
+                <h1 class="regret">You won't regret it</h1>
+            </div>
+                <svg class="arrow" viewBox="0 0 100 100">
+                    <line stroke="white" stroke-width="3" fill="none" x1="20" y1="40" x2="50" y2="80"></line>
+                    <line stroke="white" stroke-width="3" fill="none" x1="80" y1="40" x2="50" y2="80"></line>
+                </svg>
+        </div>
+        </div>
+
+       
+    </div>
+
+
+
+
+
+    <style>
+
+    
+
+        @font-face {
+            font-family:myFont;
+            src: url(mogula.otf);
+        }
+        .container {
+            height: 500vh;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            background: rgb(22,0,247);
+            background: linear-gradient(47deg, rgba(22,0,247,1) 0%, rgba(176,162,0,1) 57%, rgba(255,0,0,1) 100%);
+        }
+
+        .homePage {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: fixed;
+            top:0px;
+        }
+        .navbar {
+            position: fixed;
+            z-index: 10;
+            height: 8vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: solid rgb(235, 235, 235) 1px;
+            background: rgba(255,255,255, .05);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+        }
+        .burgerMenu {
+            height: 90%;
+            position: fixed;
+            right: 1%;
+        }
+        .burgerMenu:hover {
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            padding:0;
+        }
+        li {
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            color: white;
+            font-family: ubuntu;
+            opacity: 1;
+            user-select: none;
+            padding:0;
+        }
+        li:hover {
+            cursor: pointer;
+            animation: textshuffle .2s linear;
+        }
+
+
+     
+        body {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: rgb(121, 121, 121);
+        }
+
+        .firstPage {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .titleContainer {
+            height: 50vh;
+            width: 90vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: myFont;
+            font-size: clamp(5rem, 12vw,15rem);
+            margin: 0;
+            padding: 0;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            /*text-shadow: 2px 2px 15px #3f3f3f;*/
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-family: ubuntu;
+            font-weight: 100;
+            font-size: clamp(.75rem, 1.5vw,7.5rem);
+            color: white;
+            text-align: center;
+        }
+
+        .contactButton {
+            height: 3vw;
+            width: 20vw;
+            border-radius: 20px;
+            margin-top: 2%;
+            background-color: white;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .contactMe, .regret {
+            position: absolute;
+            color: black;
+            font-size: clamp(.5rem,1.5vw,6rem);
+            transition: .5s;
+            font-family: ubuntu;
+            font-weight: 200;
+        }
+        .regret {
+            transform: translateY(200%);
+            transition: .5s;
+            color: rgb(0, 0, 0);
+        }
+        .contactButton:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .contactButton:hover .contactMe {
+            transform: translateY(-200%);
+            transition: .5s;
+        }
+        .contactButton:hover .regret {
+            transform: translateY(0%);
+            transition: .5s;
+        }
+
+        .arrow {
+            height: 5vw;
+            width: 50px;
+            position: absolute;
+            bottom: 3%;
+            animation: scaleUp 2s infinite;
+        }
+        .circleOne {
+            /*height: 1500px;
+            width: 1500px;*/
+            height: 50vw;
+            width: 50vw;
+            border-radius: 50%;
+            background-color: rgb(122, 4, 4);
+            position: absolute;
+            left: -100px;
+            z-index: -1;
+            filter: blur(200px);
+            animation: movement 30s infinite linear;
+        }
+        .circleTwo {
+            position: absolute;
+            right: 50px;
+            top: 200px;
+            height: 60vw;
+            width: 60vw;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(120px);
+            background-color: rgb(20, 20, 172);
+            animation: movementTwo 55s infinite linear;
+        }
+
+        .circleThree {
+            position: absolute;
+            bottom: 20px;
+            left: 30%;
+            height: 65vw;
+            width: 65vw;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: rgb(38, 177, 133);
+            filter: blur(140px);
+            animation: movementThree 40s infinite linear;
+        }
+        .circleFour {
+            position: absolute;
+            bottom: 0px;
+            right:20px;
+            height: 45vw;
+            width: 45vw;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: rgb(98, 103, 3);
+            filter: blur(140px);
+            animation: movementFour 40s infinite linear;
+        }
+
+        @keyframes movement {
+            10% {
+                transform: scale(.8) translateY(40%);
+            }
+            30% {
+                transform: scale(.85) translateY(-30%);
+            }
+            90% {
+                transform: scale(.9) translateY(20%);
+            }
+            100% {
+                transform: scale(1) translateX(0%) translateY(0%);
+            }
+        }
+        @keyframes movementTwo {
+            10% {
+                transform: scale(.8) translateX(20%) translateY(-20%);
+            }
+            30% {
+                transform: scale(1.85) translateX(-40%) translateY(-30%);
+            }
+            90% {
+                transform: scale(1.3) translateY(30%) translateX(20%);
+            }
+            100% {
+                transform: scale(1) translateX(0%) translateY(0%);
+            }
+        }
+        @keyframes movementThree {
+            10% {
+                transform: scale(1.1) translateX(40%) translateY(-30%)
+            }
+            50% {
+                transform: scale(1.3) translateX(-60%) translateY(10%);
+            }
+            100% {
+                transform: scale(1) translateX(0%) translateY(0%);
+            }
+        }
+        @keyframes movementFour {
+            10% {
+                transform: scale(1.1) translateX(30%) translateY(50%)
+            }
+            50% {
+                transform: scale(1.3) translateX(-60%) translateY(10%);
+            }
+            100% {
+                transform: scale(1) translateX(0%) translateY(0%);
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+            
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes textshuffle {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(-10deg);
+            }
+            50% {
+                transform: rotate(0deg) scale(1.3);
+            }
+            75% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+
+        @media (max-width: 935px) {
+            .circleOne {
+                height:  70vw;
+                width:   70vw;
+            }
+            .circleTwo {
+                height:  80vw;
+                width:   80vw;
+            }
+            .circleThree {
+                height:  85vw;
+                width:   85vw;
+            }
+            .circleFour {
+                height:  65vw;
+                width:   65vw;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .circleOne {
+                height:  90vw;
+                width:   90vw;
+            }
+            .circleTwo {
+                height:  85vw;
+                width:   85vw;
+            }
+            .circleThree {
+                height:  95vw;
+                width:   95vw;
+            }
+            .circleFour {
+                height:  75vw;
+                width:   75vw;
+            }
+        }
+        
+        
+
+    </style>
+
+
+
+    <!--<script src="../javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+
+
+
+    <script>
+
+        let pl = gsap.timeline({}); 
+
+        pl.pause();
+
+        pl.to(".lineOneNew", {
+            y: 20,
+            ease: "power2.out"
+        })
+        pl.to(".lineTwoNew", {
+            scale: 0,
+            transformOrigin: "50% 50%"
+        },"<")
+        pl.to(".lineThreeNew", {
+            y: -20,
+            ease: "power2.out"
+        },"<")
+        pl.to(".lineOneNew", {
+            transformOrigin: "50% 50%",
+            rotate: 720
+        })
+        pl.to(".lineThreeNew", {
+            transformOrigin: "50% 50%",
+            rotate: 720
+        },"<")
+        pl.to(".lineOneNew", {
+            transformOrigin: "50% 50%",
+            rotate: 675
+        })
+        pl.to(".lineThreeNew", {
+            transformOrigin: "50% 50%",
+            rotate: 765
+        },"<")
+      
+     
+
+    </script>-->
+
+
+
+</body>
+</html>
